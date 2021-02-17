@@ -14,23 +14,24 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Linkek</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="https://bogialmasi.github.io/osszes_munka/">Összes munka</a>
-          <a class="nav-link" href="https://github.com/bogialmasi">GitHub</a>
-          <a class="nav-link" href="https://github.com/bogialmasi/java_alkfejl">Java</a>
+
+  <div class="container bg-info">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Linkek</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="https://bogialmasi.github.io/osszes_munka/">Összes munka</a>
+            <a class="nav-link" href="https://github.com/bogialmasi">GitHub</a>
+            <a class="nav-link" href="https://github.com/bogialmasi/java_alkfejl">Java</a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-  <div class="container bg-info">
+    </nav>
     <h2 class="">Mire jó a JavaScript?</h2>
     <div class="bg-light mx-auto">
       <div class="row">
@@ -41,30 +42,18 @@
           <button onclick="window.print()">Print this page</button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md text-center">
-          <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Felkapcsol</button>
-        </div>
-        <div class="col-md text-center">
-          <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Lekapcsol</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg text-center">
-          <img id="myImage" src="pic_bulboff.gif" style="width:100px; height:auto;">
-        </div>
-        <div class="col-md text-center">
-          <div class="align-middle">
-            <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
-              Idő és Dátum</button>
+      <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Idő és Dátum</button>
 
-            <p id="demo"></p>
-          </div>
-        </div>
+          <p id="demo"></p>
+      <div>
+        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Felkapcsol</button>
+        <img id="myImage" src="pic_bulboff.gif">
+        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Lekapcsol</button>
+        
       </div>
     </div>
-    <p id="bg-info demo align-middle text-center">JavaScript bemutatása</p>
   </div>
+  <p id="bg-info demo align-middle text-center">JavaScript bemutatása</p>
   </div>
 </body>
 
