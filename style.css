@@ -1,19 +1,24 @@
-body{
+body {
+    background-color: rgb(30, 145, 218);
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    color: black;
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin:-100px 0 0 -150px;
+    color: white;
+    width: 500px;
+    height: 800px;
+    position: center;
+    left: 80%;
+    top: 80%;
+    margin: -200px 0 0 -250px;
 }
 
-.nav-link{
-    color: grey;
+.navbar {
+    z-index: 10000;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+ }​
+
+#navbarNavAltMarkup {
+    color: rgb(30, 145, 218);
     text-decoration: none;
-}
-
-.egesz{
-    text-align: center;
-    margin: 10%;
 }

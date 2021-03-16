@@ -2,59 +2,127 @@
 <html lang="hu">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <script src="jquery-3.5.1.min.js"></script>
-  <script src="../../js/bootstrap.min.js"></script>
-  <link rel="icon" href="js.png" type="image/jpg" sizes="16x16">
-  <script src="script1.js"></script>
-
-  <title>Mire jó a JavaScript?</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="java.css">
+    <link rel="shortcut icon" href="js.png" type="image/x-icon">
+    <title>Javascript</title>
 </head>
 
-<body>
-
-  <div class="container bg-info">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Linkek</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link" href="https://bogialmasi.github.io/osszes_munka/">Összes munka</a>
-            <a class="nav-link" href="https://github.com/bogialmasi">GitHub</a>
-            <a class="nav-link" href="https://github.com/bogialmasi/java_alkfejl">Java</a>
-          </div>
-        </div>
-      </div>
+<body id="teljes">
+    <nav class="navbar navbar-light bg-light">
+        <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button">Változtass!</button>
+            <button type="button" class="btn btn-outline-info"
+                onclick="document.getElementById('teljes').style.fontSize='34px'">Betűméret</button>
+            <button class="btn btn-outline-info" type="button" onclick="myFunction()">Éjszakai mód/Nappali mód</button>
+            <button class="btn btn-outline-info" type="button" onclick="pasztel()">Pasztel</button>
+            <button class="btn btn-outline-info" type="button" onclick="harsany()">Harsány</button>
+            <button class="btn btn-outline-info" type="button" onclick="kepki()">Képek ki</button>
+            <button class="btn btn-outline-info" type="button" onclick="kepbe()">Képek be</button>
+            <button class="btn btn-outline-info" type="button" onclick="szoveg()">Szöveg nagyítása</button>
+        </form>
     </nav>
-    <h2 class="">Mire jó a JavaScript?</h2>
-    <div class="bg-light mx-auto">
-      <div class="row">
-        <div class="col-md text-center">
-          <button onclick="alert('AB 113C')">Gomb</button>
-        </div>
-        <div class="col-md text-center">
-          <button onclick="window.print()">Print this page</button>
-        </div>
-      </div>
-      <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Idő és Dátum</button>
+    <script>
+        function myFunction() {
+            let element = document.body;
+            element.classList.toggle("dark-mode");
+        }
 
-          <p id="demo"></p>
-      <div>
-        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Felkapcsol</button>
-        <img id="myImage" src="pic_bulboff.gif">
-        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Lekapcsol</button>
-        
-      </div>
+        function pasztel() {
+            body.style.backgroundColor = "#C6DBDA";
+            body.style.color = "#ffffff";
+        }
+
+        function harsany() {
+            body.style.backgroundColor = "#FE53BB";
+            body.style.color = "#000000";
+        }
+
+        function kepki() {
+            if (tesztkep.style.visibility == "visible") {
+                tesztkep.style.visibility = "hidden";
+            }
+        }
+        function kepbe() {
+            if (tesztkep.style.visibility == "hidden") {
+                tesztkep.style.visibility = "visible";
+            }
+        }
+
+        function szoveg() {
+            var p = document.getElementsByTagName('p');
+            for (i = 0; i < p.length; i++) {
+                if (p[i].style.fontSize) {
+                    var s = parseInt(p[i].style.fontSize.replace("px", ""));
+                } else {
+                    var s = 12;
+                } if (s != max) {
+                    s += 1;
+                }
+                p[i].style.fontSize = s + "px"
+            }
+        }
+    </script>
+    <div class="container bg-light p-3 my-4">
+        <header class="text-center">
+            <h1>Mit tud a JavaScript?</h1>
+            <button class="btn btn-block btn btn-outline-warning" type="button"
+                onclick="alert('Az oldal készítője: Mátyás Martina')">Szerző</button><br>
+            <button class="btn btn-block btn btn-outline-warning" type="button" onclick="window.print()">Oldal
+                nyomtatása</button><br>
+
+            <hr>
+        </header>
+        <div>
+            <button type="button" class="btn btn-outline-info"
+                onclick="document.getElementById('demo').innerHTML = Date()">
+                Mai dátum és idő megjelenítése</button>
+            <button type="button" class="btn btn-outline-info"
+                onclick="document.getElementById('demo').innerHTML =' ' ">
+                Dátum törlése</button>
+            <p id="demo"></p>
+            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst" target="_blank"><img src="w3.PNG"
+                    alt="w3schools" class="rounded-circle border border-success"></a>
+            <hr>
+        </div>
+        <div>
+            <button class="btn btn-outline-info"
+                onclick="document.getElementById('kepem').src='pic_bulbon.gif'">Kapcsold fel!</button>
+
+            <img id="kepem" src="pic_bulboff.gif" alt="korte">
+
+            <button class="btn btn-outline-info"
+                onclick="document.getElementById('kepem').src='pic_bulboff.gif'">Kapcsold le!</button><br>
+
+            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb" target="_blank"><img
+                    src="w3.PNG" alt="w3schools" class="rounded-circle border border-success"></a>
+            <hr>
+        </div>
+        <div>
+            <h2>JavaScript megváltoztatja a HTML elemek stílusát.</h2>
+            <p id="teljes">Megváltoztathatod a bekezdésed kinézetét.</p>
+
+
+            <button type="button" class="btn btn-outline-info"
+                onclick="document.getElementById('teljes').style.color='pink'">Betűszín</button>
+            <button type="button" class="btn btn-outline-info"
+                onclick="document.getElementById('teljes').style.border='dashed'">Szegély</button>
+            <button type="button" class="btn btn-outline-info"
+                onclick="document.getElementById('teljes').style.padding='30px'">Belső margó</button>
+            <button type="button" class="btn btn-outline-info"
+                onclick="document.getElementById('teljes').style.margin='20px'">Külső margó</button>
+            <button type="button" class="btn btn-outline-info"
+                onclick="document.getElementById('teljes').style.backgroundColor='black'">Háttérszín</button><br><br>
+        </div>
+        <footer>
+            <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_style" target="_blank"><img
+                    src="w3.PNG" alt="w3schools" class="rounded-circle border border-success"></a>
+        </footer>
+
     </div>
-  </div>
-  <p id="bg-info demo align-middle text-center">JavaScript bemutatása</p>
-  </div>
 </body>
 
 </html>
